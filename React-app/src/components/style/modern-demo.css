@@ -1,0 +1,140 @@
+/* Modern Demo Section Styles */
+.modern-demo-section {
+  padding: 100px 0;
+  background-color: #f0f4f1;
+  position: relative;
+  overflow: hidden;
+}
+
+.modern-demo-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1504173010664-32509aeebb62?ixlib=rb-1.2.1&auto=format&fit=crop&w=1050&q=80');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.03;
+  z-index: 1;
+}
+
+.modern-demo-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.demo-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.demo-header .section-title {
+  color: var(--primary-dark);
+}
+
+.demo-content {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  margin-bottom: 60px;
+  position: relative;
+  overflow: hidden;
+}
+
+.demo-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+}
+
+.demo-info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.info-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.info-icon {
+  width: 60px;
+  height: 60px;
+  background-color: rgba(46, 125, 50, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  transition: all 0.3s ease;
+}
+
+.info-icon svg {
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover .info-icon {
+  background-color: var(--primary-color);
+}
+
+.info-card:hover .info-icon svg {
+  color: white;
+}
+
+.info-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.info-card p {
+  font-size: 15px;
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+  .modern-demo-section {
+    padding: 80px 0;
+  }
+  
+  .demo-info {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modern-demo-section {
+    padding: 60px 0;
+  }
+  
+  .demo-content {
+    padding: 20px;
+  }
+  
+  .demo-info {
+    grid-template-columns: 1fr;
+  }
+}

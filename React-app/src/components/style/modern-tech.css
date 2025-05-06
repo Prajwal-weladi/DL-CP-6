@@ -1,0 +1,95 @@
+/* Modern Technology Section Styles */
+.modern-tech-section {
+  padding: 100px 0;
+  background-color: white;
+  position: relative;
+}
+
+.tech-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.tech-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.tech-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-light);
+}
+
+.tech-icon {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.tech-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  transition: all 0.3s ease;
+}
+
+.tech-card:hover .tech-icon img {
+  transform: scale(1.1);
+}
+
+.tech-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary-dark);
+  margin-bottom: 15px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tech-card p {
+  font-size: 15px;
+  color: var(--text-dark);
+  line-height: 1.6;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Responsive styles */
+@media (max-width: 991.98px) {
+  .modern-tech-section {
+    padding: 80px 0;
+  }
+  
+  .tech-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .modern-tech-section {
+    padding: 60px 0;
+  }
+  
+  .tech-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .tech-icon {
+    width: 100px;
+    height: 100px;
+  }
+}
